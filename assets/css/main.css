@@ -4375,8 +4375,9 @@ article, aside, figcaption, figure, footer, header, nav, section {
 }
 
 h1, h2, h3, h4, stong {
-    margin-top: 1em;
-    padding-top: 1em;
+    margin-top: 0.7em;
+    margin-bottom: 0.3em;
+    padding-top: 0.3em;
     line-height: 1.25;
     color: #333
 }
@@ -4443,6 +4444,17 @@ sub, sup {
         opacity: 1;
         top: -10px
     }
+}
+
+img.picture {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    width: 150px;
+}
+
+img.picture:hover {
+    box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
 }
 
 #particles-js {
@@ -4521,14 +4533,14 @@ sub, sup {
     }
 }
 
-.header-icons {
+.icons {
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center
 }
 
-.header-icons a {
+.icons a {
     border: none !important;
     padding: none;
     margin: none
@@ -4536,6 +4548,11 @@ sub, sup {
 
 .down, .header-icons .icon {
     color: #fff;
+    text-align: center
+}
+
+.footer-icons .icon {
+    color: #000;
     text-align: center
 }
 
@@ -4553,6 +4570,17 @@ sub, sup {
 .header-icons .icon:active, .header-icons .icon:hover {
     color: #1a222c;
     background: #fff
+}
+
+.footer-icons .icon {
+    height: 20px;
+    padding: 10px;
+    border-radius: 50%;
+    transition: all .5s;
+    width: 20px;
+    font-size: 20px;
+    margin: 5px;
+    border: 2px solid #000
 }
 
 @media only screen and (min-width: 768px) {
@@ -4600,7 +4628,6 @@ sub, sup {
     font-size: 120%;
     width: 90%;
     margin: 0 auto;
-    max-width: 960px
 }
 
 @media only screen and (min-width: 768px) {
@@ -4616,7 +4643,6 @@ sub, sup {
 
 .tech {
     margin: 10px;
-    flex: 1 1 0
 }
 
 .tech h2, .tech h3, .user-details h1, body {
@@ -4624,11 +4650,11 @@ sub, sup {
 }
 
 .user {
+    margin-top: 35px;
     text-align: center;
     font-size: 60px;
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-direction: column;
     justify-content: space-between
 }
 
@@ -4638,20 +4664,50 @@ sub, sup {
 
 @media only screen and (min-width: 768px) {
     .user {
-        flex-wrap: nowrap;
-        font-size: 75px
+        font-size: 75px;
+        flex-direction: row;
     }
 }
 
 .user-details {
     text-align: center;
-    margin: 5px auto
+    margin: 5px auto;
+    width: 80%;
+}
+
+#listening {
+    background: #3b4c62;
+    color: #fff
+}
+#listening .user-details {
+    padding-top: 1px;
+}
+
+#listening .user-details h1 {
+    color: #fff;
+}
+
+@media only screen and (min-width: 768px) {
+
+    #listening .user {
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+
+    .video {
+        width: 30%;
+        min-height: 350px;
+    }
+    .video iframe {
+        border: none;
+        width: 100%;
+        height: 80%;
+    }
 }
 
 .footer {
-    background: #1a222c;
+    background: #0b1420;
     padding: 10px 0;
-    margin-top: 100px;
     text-align: center;
     color: #fff
 }
@@ -4663,5 +4719,5 @@ sub, sup {
 .footer a {
     text-decoration: none;
     margin: 0;
-    color: #fff
+    color: #fff;
 }

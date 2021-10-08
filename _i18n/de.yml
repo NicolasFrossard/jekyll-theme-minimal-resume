@@ -1,2 +1,12 @@
 global:
-  title: Jazz & Groove Band von Strasbourg
+  title: Jazz & Funk Band von Straßburg
+  switchLang: Version en français
+about:
+  title: Über Lumia
+  text1: Lumia ist eine Straßburger Band, die zwischen Jazz, Funk und instrumentalem Groove wechselt.
+  text2: Die Band existiert seit 2019 und macht Konzerten in Frankreich und in Deutschland.
+listening:
+  title: Lumia Zuhören
+concert:
+  title: Lumia im Konzert bei Ihnen?
+  button: Kontaktieren Sie uns!
