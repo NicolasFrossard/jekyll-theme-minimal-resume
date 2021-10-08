@@ -14,3 +14,8 @@ email: mauriurraco@gmail.com
 # gplus_username:  lorem_ipsum
 
 exclude: ['package.json', 'src' , 'node_modules']
+
+plugins:
+  - jekyll-multiple-languages-plugin
+
+languages: ["fr", "de"]
