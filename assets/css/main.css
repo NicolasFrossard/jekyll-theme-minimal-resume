@@ -4458,34 +4458,104 @@ img.picture:hover {
 }
 
 #particles-js {
-    background: #0f1a28;
     display: flex;
     vertical-align: bottom;
-    min-height: 100vh;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed
+    height: 100vh;
+    background: black;
 }
 
-#particles-js .particles-js-canvas-el {
-    height: 100vh !important
+.particles-image {
+    width: 100vw;
+    object-fit: scale-down;
 }
 
-.logo {
+#particles-image-small-screen {
+    display: inherit;
+}
+#particles-image-big-screen {
+    display: none;
+}
+
+@media only screen and (min-width: 768px) {
+    #particles-image-small-screen {
+        display: none;
+    }
+    #particles-image-big-screen {
+        display: inherit;
+    }
+
+}
+
+#main-img {
     width: 100%;
 }
 
+#front-big {
+    width: 100vw;
+    height: 100vh;
+    display: none;
+}
+
+#front-small {
+    width: 100vw;
+    height: 100vh;
+    display: unset;
+}
+
+@media only screen and (min-width: 768px) {
+    #particles-js {
+        /*background-image: url(/assets/lumia-9.jpg);*/
+    }
+
+    #front-big {
+        display: unset;
+    }
+
+    #front-small {
+        display: none;
+    }
+}
+
+img#logo {
+    width: 325px;
+    margin-top: 20px;
+}
+
+@media only screen and (min-width: 768px) {
+    img#logo {
+        width: 400px;
+    }
+}
+
+#particles-js-pre-space {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 100%);
+    height: 125px;
+    z-index: 1;
+    color: #fff;
+    position: absolute;
+    margin: 0 auto;
+    width: 100%;
+    top: 0;
+}
+
+@media only screen and (min-width: 768px) {
+    #particles-js-pre-space {
+        display: none;
+    }
+}
+
+
 .header {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 50%);
+    height: 310px;
     font-family: 'Montserrat', sans-serif;
     z-index: 1;
     text-align: center;
     color: #fff;
     position: absolute;
-    top: 45%;
-    left: 50%;
     margin: 0 auto;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%)
+    width: 100%;
+    bottom: 0;
 }
 
 .header .site-title {
@@ -4507,7 +4577,6 @@ img.picture:hover {
     display: block;
     line-height: 1;
     color: #fff;
-    margin-top: 35px
 }
 
 @media only screen and (min-width: 768px) {
@@ -4546,30 +4615,44 @@ img.picture:hover {
     margin: none
 }
 
-.down, .header-icons .icon {
+.header-icons .icon {
+    color: #2b1d1c;
+    text-align: center;
+    z-index: 2;
+}
+
+.header-icons .footer-icons .icon {
     color: #fff;
-    text-align: center
+    border: 2px solid #fff
+}
+
+.circle-arrow {
+    color: #b7afad;
+    text-align: center;
+    z-index: 2;
 }
 
 .footer-icons .icon {
-    color: #000;
+    color: #b7afad;
     text-align: center
 }
 
 .header-icons .icon {
+    margin-top: 25px;
+    margin-left: 5px;
+    margin-right: 5px;
     height: 20px;
     padding: 10px;
     border-radius: 50%;
     transition: all .5s;
     width: 20px;
     font-size: 20px;
-    margin: 5px;
-    border: 2px solid #fff
+    border: 2px solid #2b1d1c
 }
 
 .header-icons .icon:active, .header-icons .icon:hover {
-    color: #1a222c;
-    background: #fff
+    color: #fff;
+    background: #2b1d1c
 }
 
 .footer-icons .icon {
@@ -4580,7 +4663,7 @@ img.picture:hover {
     width: 20px;
     font-size: 20px;
     margin: 5px;
-    border: 2px solid #000
+    border: 2px solid #b7afad;
 }
 
 @media only screen and (min-width: 768px) {
@@ -4594,7 +4677,7 @@ img.picture:hover {
 
 .down {
     position: absolute;
-    bottom: 35px;
+    bottom: 15px;
     width: 100%;
     margin: 0 auto;
     display: block;
@@ -4605,7 +4688,7 @@ img.picture:hover {
 }
 
 .down .icon {
-    font-size: 60px;
+    font-size: 40px;
     position: absolute;
     -webkit-transform-style: preserve-3d;
     transform-style: preserve-3d;
@@ -4614,7 +4697,7 @@ img.picture:hover {
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     width: 150px;
-    height: 150px;
+    height: 120px;
     fill: #fff;
     -webkit-animation: pulse 1.3s infinite;
     animation: pulse 1.3s infinite
@@ -4675,16 +4758,8 @@ img.picture:hover {
     width: 80%;
 }
 
-#listening {
-    background: #3b4c62;
-    color: #fff
-}
 #listening .user-details {
     padding-top: 1px;
-}
-
-#listening .user-details h1 {
-    color: #fff;
 }
 
 @media only screen and (min-width: 768px) {
@@ -4706,11 +4781,12 @@ img.picture:hover {
 }
 
 .footer {
-    background: #0b1420;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%,  #190f0e 10%);
     padding: 10px 0;
     text-align: center;
     color: #fff
 }
+
 
 .footer .love {
     color: red

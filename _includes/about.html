@@ -1,7 +1,22 @@
+<div class="about-container">
 <div class="user-details">
   <h1>{% t about.title %}</h1>
   <br>{% t about.text1 %}
   <br>{% t about.text2 %}
+</div>
+<div class="icons header-icons" style="font-size: 0.5rem;">
+  <a aria-label="Email" title="Email" href="mailto:lumia.theband@gmail.com"><i class="icon fa fa-envelope"></i></a>
+  <a aria-label="Instagram" title="Instagram" target="_blank" href="https://www.instagram.com/lumiaband"><i class="icon fa fa-instagram" aria-hidden="true"></i></a>
+  <a aria-label="Facebook" title="Facebook" target="_blank" href="https://www.facebook.com/Lumiatheband"><i class="icon fa fa-facebook" aria-hidden="true"></i></a>
+  <a aria-label="Youtube" title="Youtube" target="_blank" href="https://www.youtube.com/channel/UCIvrlmGBx5YJuRmCfp94xBg"><i class="icon fa fa-youtube-square" aria-hidden="true"></i></a>
+  <a aria-label="Soundcloud" title="Soundcloud" target="_blank" href="https://soundcloud.com/lumia-the-band"><i class="icon fa fa-music" aria-hidden="true"></i></a>
+  {% if site.lang == "fr" %}
+  {% capture link1 %}{{ site.baseurl_root }}/de{{ page.url}}{% endcapture %}
+  <a href="{{ link1 }}" title="{% t global.switchLang %}"><i class="icon fa" aria-hidden="true">🇩🇪</i></a>
+  {% elsif site.lang == "de" %}
+  {% capture link2 %}{{ site.baseurl_root }}{{ page.url  }}{% endcapture %}
+  <a href="{{ link2 }}" title="{% t global.switchLang %}"><i class="icon fa" aria-hidden="true">🇫🇷</i></a>
+  {% endif %}
 </div>
 <div class="user">
   <div class="tech">
@@ -13,4 +28,5 @@
   <div class="tech">
     <a href="assets/about3.jpg"><img style="width: 100%" src="assets/about3.jpg"></a>
   </div>
+</div>
 </div>
